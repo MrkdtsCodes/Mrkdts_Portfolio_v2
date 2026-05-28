@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mrkdts Webspace</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="element">
+    <div class="mainContainer element">
+      <header>
+        <div class="titleContainer">
+          <h1>Hi, I'm Datus</h1>
+          <span class="description">
+            <p id="descriptionRole">Aspiring FullStack Web Developer.</p>
+            <p id="descriptionSays">1% improvement Everyday</p>
+          </span>
+        </div>
+
+        <div class="imageContainer element">
+          <img
+            src="./assets/Toga_picture.jpeg"
+            alt="picture_of_Dwight_RAMOS"
+            style="display: nones"
+            id="light_bg_img"
+          />
+        </div>
+      </header>
+
+      <main>
+        <button id="darkmode_button">
+            <div class="darkmodeBtn">
+              <svg id="drkbtn" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon-star-icon lucide-moon-star"><path d="M18 5h4"/><path d="M20 3v4"/><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
+            </div>
+          </button>
+
+        <section class="about" element>
+          <h3>About me</h3>
+          <article>
+            An IT student from the Philippines focused on web development,
+            working on both frontend and backend technologies.
+            <br />
+            <br />
+            Currently in my senior year at Pamantasan ng Lungsod ng Pasig,
+            working towards my bachelor's degree in Information Technology. I'm
+            currently learning and specializing in PHP and JavaScript for web
+            development.
+          </article>
+        </section>
+
+          <section class="Education element">
+          <h3>Education</h3>
+          <div class="SchoolContainer">
+            <div class="Education_left">
+              <div class="logoContainer">
+                <img src="./assets/PLP.logo.png" alt="Plp_logo" />
+              </div>
+
+              <div class="UnivNameContainer">
+                <div class="schoolname">
+                  <h3>Pamantasan ng Lungsod ng Pasig</h3>
+
+                  <p>Bachelor of Science in Information Technology</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="yearConatiner">
+              <p>2023-2026</p>
+            </div>
+          </div>
+
+          <div class="SchoolContainer">
+            <div class="Education_left">
+              <div class="logoContainer">
+                <img src="./assets/logo-ptc.png" alt="Plp_logo" />
+              </div>
+
+              <div class="UnivNameContainer">
+                <div class="schoolname">
+                  <h3>Pateros Technological College</h3>
+
+                  <p>Bachelor of Science in Information Technology</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="yearConatiner">
+              <p>2022-2023</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="teck_stack">
+          <h3>Teck Stack</h3>
+
+          <div class="techContainer" id="techlanguageContainer"></div>
+        </section>
+
+        <section class="projContainer element">
+          <h3>Projects</h3>
+
+          <div class="projectTabs" id="projectcontainer"></div>
+
+          <div class="moretab">
+            <span>
+              <a href="https://github.com/MrkdtsCodes">View more Projects</a>
+            </span>
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-chevron-right-icon lucide-chevron-right"
+              >
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            </span>
+          </div>
+        </section>
+
+        <section class="certificateContainer element">
+          <h3>Certificates</h3>
+
+          <span
+            >Here are some of my certificates i get during my College
+            Journey.</span
+          >
+          <div class="carousel">
+            <div class="track">
+              <div class="group" id="group"></div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <h3>Get In Touch</h3>
+        <span
+          >I'm currently on the lookout for a chance to learn and grow through
+          an internship or job. I’d love to hear from you!
+        </span>
+      </footer>
+    </div>
+  </body>
+  <script src="Script.js"></script>
+  <!-- <script src="Re-write.js"></script> -->
+</html>

@@ -1,0 +1,471 @@
+:root{
+    --bg-color:white;
+    --text-color: black;
+    --article-color: #708090;
+    --span-color: #100c08;
+    --span-text: white;
+    
+    --card-border: 1px solid rgba(0,0,0,0.08);
+    --card-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px,
+                   rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+}
+
+body.darkmode{
+    --bg-color:  #1E1F21;
+    --text-color: #F8F8F8;
+    --span-color: #708090;
+    --span-text: #F8F8F8;
+    --card-border: 1px solid rgba(255,255,255,0.15);
+    --card-shadow: rgba(0,0,0,0.5) 0px 2px 5px;
+
+}
+
+body{
+    font-family: 'Sora', sans-serif; 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 10px;
+    display: grid;
+    place-items: center;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.mainContainer{
+    max-width: 700px;
+    padding: 10px;
+}
+
+
+header{
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.titleContainer{
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.titleContainer h1,
+.titleContainer p {
+    margin: 0;
+    
+}
+
+.titleContainer h1{
+    font-size: clamp(28px, 5vw, 50px);
+    font-weight: 900;
+    /* padding-left: 10px; */
+}
+
+
+.description{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    /* padding: 10px; */
+    
+    
+}
+
+#descriptionRole {
+    font-size: clamp(14px, 2.5vw, 18px);
+    transition: opacity 0.5s ease-in-out;
+}
+
+#descriptionSays{
+    font-size: clamp(12px, 2vw, 13px);
+}
+
+.imageContainer{
+    width: 40%; 
+    display: none;
+
+}
+
+.imageContainer img{
+    padding: 5px;
+    height: 180px;
+    border-radius: 16px;
+    box-shadow: var(--border-shadow);
+
+}
+
+#light_bg_img{
+    transition: transform 0.5s ease;
+}
+
+#light_bg_img.rotated { transform: rotate(360deg); }
+
+
+
+#darkmode_button{
+    background: transparent;
+    border: none;
+    width: 100%;
+}
+
+
+.darkmodeBtn {
+  font-family: "Open Sans", sans-serif;
+  max-width: 35px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--text-color);       
+  border-color: var(--text-color);
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.darkmodeBtn:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+@media (min-width: 768px) {
+  .darkmodeBtn {
+    padding: 0.25em 0.75em;
+  }
+}
+
+#drkbtn {
+    stroke: black;  /* light mode */
+
+}
+
+.darkmode #drkbtn {
+    stroke: white;  /* dark mode */
+
+}
+
+.sociallinks{
+    display: flex;
+}
+
+
+
+.about{
+  
+    display: flex;
+    flex-direction: column;
+}
+
+.about article{
+    padding: 5px;
+    color: var(--article-color);
+    font-size: clamp(13px, 2.5vw, 14px);
+}
+
+
+
+.SchoolContainer{
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.Education_left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.schoolname h3,
+.schoolname p {
+    margin: 3px;
+}
+.schoolname{
+    flex-grow: 1;
+}
+
+.schoolname h3{
+    font-size: clamp(12px, 2.5vw, 13px);
+    font-weight: 700;
+}
+.schoolname p,
+.yearConatiner p{
+    font-size: clamp(11px, 2vw, 12px);
+    color: var(--article-color)
+}
+
+
+
+.logoContainer{
+    display: flex;
+    align-items: center;
+}
+
+.logoContainer img{
+    max-height: 50px;
+    
+}
+
+
+.teck_stack{
+    display: flex;
+    flex-direction: column;
+}
+.techContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+.techtitle{
+    font-weight: 600;
+}
+
+.technologies{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.technologies span{
+    background-color: var( --span-color);
+    padding: 5px 15px;
+    border-radius: 35px;
+    color: var(--span-text);
+    font-size: clamp(11px, 2vw, 13px);
+}
+
+.projContainer{
+   display: flex;
+   flex-direction: column;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.projectTabs {
+    gap: 20px;
+
+}
+
+.project{
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+    padding: 25px 15px;
+    border: var(--card-border);
+    box-shadow: var(--card-shadow)
+}
+
+.projectDescription{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.projectSnapshot {
+    padding: clamp(20px, 8vw, 80px); /* Small on mobile, large on desktop */
+    border: 1px solid var(--border);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projecttitle{
+    font-size: clamp(15px, 2vw, 18px);
+    font-weight: bold;
+    margin-top: 5px ;
+}
+
+.projectDesc{
+    font-size: clamp(10px, 2vw, 12px);
+    
+}
+
+.projectTeckstack {
+    display: flex;
+    flex-wrap: wrap; /* CRITICAL FIX */
+    gap: 6px;
+}
+
+.projectTeckstack span{
+    background-color: var(--article-color);
+    padding: 5px 15px;
+    border-radius: 35px;
+    color: white;
+    font-size: clamp(8px, 2vw, 10px);
+}
+
+.moretab{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.moretab span{
+    display: flex;
+    justify-content: center;
+}
+
+.moretab a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: clamp(9px, 2vw, 15px);
+}
+
+.certificateContainer{
+    margin: 0;
+    padding: 0;
+}
+
+
+.certificateContainer span, .certificateContainer h3{
+    margin-bottom: 10px;
+}
+
+.carousel{
+    width: 100%;
+    overflow: hidden; 
+    margin-top: 10px;
+    
+}
+
+
+.track{
+    display: flex;
+    width: max-content;
+    gap: 1em;
+    animation: slide  20s linear infinite; 
+    padding: 10px;
+}
+
+.group{
+    display: flex;
+    gap: 1em;
+}
+
+.card{
+    flex: 0 0 clamp(180px, 40vw, 260px);
+    padding: 15px;
+    box-shadow: var(--border-shadow);
+    border: 1px solid var(--span-color);
+    font-size: 3rem;
+    border-radius: .2em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.carousel::-webkit-scrollbar{
+    display: none;
+}
+
+.imageCard {
+    height: 90px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imageCard img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+}
+
+
+.nameCard {
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    font-size: clamp(9px, 2vw, 12px);
+    overflow: hidden;
+}
+
+.certificateName, .Certificate_place {
+     text-overflow: ellipsis;
+     overflow: hidden;
+     white-space: nowrap;
+     width: 100%;
+     display: block;
+}
+
+
+.certificateContainer span{
+    font-size: clamp(9px, 2vw, 15px);
+    color: var(--article-color);
+}
+
+.track:hover{
+    animation-play-state: paused;
+}
+
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%); 
+  }
+}
+
+
+footer{
+    text-align: center;
+    font-size: clamp(12px, 2vw, 15px);
+    
+}
+
+footer span{
+    color: var(--article-color);
+}
+
+/* For devices with a minimum width of 768px (Medium) */
+@media (max-width: 600px) {
+  .track {
+    animation-duration: 20s; /* slower on mobile */
+  }
+
+  .card {
+    flex: 0 0 70vw; /* show 1 card at a time */
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .imageContainer{
+    display: flex;
+    justify-content: center;
+  }
+
+  .projectTabs{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projectSnapshot{
+    min-height: 100px;
+    
+    }
+
+    .titleContainer {
+        width: 60%; /* Only split the width when the image appears */
+    }
+
+}
