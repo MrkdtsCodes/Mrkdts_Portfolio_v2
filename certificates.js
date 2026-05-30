@@ -86,9 +86,9 @@ function _showCertificates(array){
 
     
 };
-const closeBtnn = document.querySelector('.closeBtn');
+const closeButton = document.querySelector('.closeBtn');
 
-    closeBtnn.addEventListener('click', function(){
+    closeButton.addEventListener('click', function(){
         const modelcontainers = document.getElementById('modelcontainers');
         modelcontainers.style.display = "none";
     });
